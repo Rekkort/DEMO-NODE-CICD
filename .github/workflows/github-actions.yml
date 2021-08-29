@@ -18,13 +18,12 @@ jobs:
         - run: npm ci
         - run: npm install -g mocha
         - run: npm run build --if-present
-        - run: npm test
+        
         - uses: actions/setup-go@master
         - uses: actions/checkout@master
           with:
             path: './src/github.com/github-release/github-release'
         - run: echo "GOPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
         - run: echo "PATH=$GITHUB_WORKSPACE/bin:$PATH" >> $GITHUB_ENV
-        - name: Run tests
-          run: make lint test
+        - run: npm test
           working-directory: './src/github.com/github-release/github-release'

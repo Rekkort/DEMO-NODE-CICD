@@ -19,11 +19,7 @@ jobs:
             node-version: '14'
             repo_token: "${{ secrets.GITHUB_TOKEN }}"
             prerelease: false
-            files: |
-              LICENSE.txt
-              *.jar
-        - run: git config --global user.name User
-        - run: git config --global user.email user@example.org
+            files: LICENSE.txt *.jar
         - run: npm ci
         - run: npm install -g mocha
         - run: npm run build --if-present

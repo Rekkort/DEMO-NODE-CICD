@@ -24,4 +24,4 @@ jobs:
         - run: npm install -g bats
         - run: npm run build --if-present
         - run: npm test
-        - github.release: true
+        - run: gh release create

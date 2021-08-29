@@ -16,6 +16,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "github": "^14.0.0",
     "nodemon": "^2.0.12",
     "yamljs": "^0.3.0"
   },

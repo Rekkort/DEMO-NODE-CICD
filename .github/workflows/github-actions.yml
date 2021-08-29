@@ -5,8 +5,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-# env:
-#   GITHUB_TOKEN: 
+  release:
+    types: [published, edited]
 
 jobs:
     Pipeline:
@@ -22,6 +22,11 @@ jobs:
         - run: npm install -g mocha
         - run: npm run build --if-present
         - run: npm test
+        - uses: Actions-R-Us/actions-tagger@latest
+        env:
+          GITHUB_TOKEN: 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
+        with:
+          publish_latest_tag: true
         # - run: gh auth status
         # - run: gh auth login --with-token
         # - run: gh release create latest

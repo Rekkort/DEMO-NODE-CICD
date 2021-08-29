@@ -5,8 +5,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-env:
-  GITHUB_TOKEN: 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
+# env:
+#   GITHUB_TOKEN: 
 
 jobs:
     Pipeline:
@@ -22,8 +22,6 @@ jobs:
         - run: npm install -g mocha
         - run: npm run build --if-present
         - run: npm test
-        - run: export GITHUB_TOKEN =
-        - run: gh auth status
-        - run: gh auth login --with-token
-        - run: gh auth status
-        - run: gh release create latest
+        # - run: gh auth status
+        # - run: gh auth login --with-token
+        # - run: gh release create latest

@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 env:
   GITHUB_TOKEN: 1
-  
+
 jobs:
   release:
     check-bats-version:
@@ -25,4 +25,4 @@ jobs:
         - run: npm install -g bats
         - run: npm run build --if-present
         - run: npm test
-        - run: npm run release
+        - release: npm run release

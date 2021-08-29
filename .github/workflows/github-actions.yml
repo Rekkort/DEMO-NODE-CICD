@@ -18,12 +18,6 @@ jobs:
         - run: npm ci
         - run: npm install -g mocha
         - run: npm run build --if-present
-        
-        - uses: actions/setup-go@master
-        - uses: actions/checkout@master
-          with:
-            path: './src/github.com/github-release/github-release'
         - run: npm test
-          working-directory: './src/github.com/github-release/github-release'
-        - run: gh auth login --with-token
+        - run: gh auth login --hostname Rekkort
         - run: gh release create latest

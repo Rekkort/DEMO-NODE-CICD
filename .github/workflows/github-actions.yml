@@ -22,19 +22,15 @@ jobs:
         - run: npm install -g mocha
         - run: npm run build --if-present
         - run: npm test
-        # - uses: Actions-R-Us/actions-tagger@latest
-        #   env:
-        #     GITHUB_TOKEN: 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
-        #   with:
-        #     publish_latest_tag: true
         - uses: svenstaro/upload-release-action@v2
           with:
-            repo_token: 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
-            file: 
-            asset_name:
+            repo_token: ${{ github.token }} 
+            file: ./README.md
+            asset_name: README.md
             tag: latest
             overwrite: true
             body: "Mise à jour"
         # - run: gh auth status
         # - run: gh auth login --with-token
         # - run: gh release create latest
+        # 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

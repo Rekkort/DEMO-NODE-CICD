@@ -19,5 +19,5 @@ jobs:
         - run: npm install -g mocha
         - run: npm run build --if-present
         - run: npm test
-        - run: gh auth login --hostname Rekkort
+        - run: gh auth login --with-token < mytoken.txt
         - run: gh release create latest

@@ -13,14 +13,14 @@ jobs:
       steps:
      
         - uses: actions/checkout@v2
+        - uses: actions/setup-node@v2
+          with:
+            node-version: '14'
         - run: git fetch --unshallow --tags
         - uses: terradatum/auto-action@master
           env:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        - uses: actions/setup-node@v2
-          with:
-          node-version: '14'
         - run: npm ci
         - run: npm install -g mocha
         - run: npm run build --if-present

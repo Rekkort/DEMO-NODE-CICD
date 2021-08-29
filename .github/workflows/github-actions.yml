@@ -6,8 +6,6 @@ on:
   pull_request:
     branches: [ main ]
 
-GITHUB_TOKEN: 1
-
 jobs:
     Pipeline:
       runs-on: ubuntu-latest
@@ -22,5 +20,5 @@ jobs:
         - run: npm install -g mocha
         - run: npm run build --if-present
         - run: npm test
-        - run: gh auth login --with-token
+        # - run: gh auth login --
         - run: gh release create latest

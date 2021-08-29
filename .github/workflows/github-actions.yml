@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
 jobs:
     Pipeline:
       runs-on: ubuntu-latest
@@ -19,5 +20,5 @@ jobs:
         - run: npm install -g mocha
         - run: npm run build --if-present
         - run: npm test
-        - run: gh auth login --with-token "https://github.com/ on UC-REKKORT at 08-juin-2020 21:12"
+        - run: gh auth login --with-token https://github.com/ on UC-REKKORT at 08-juin-2020 21:12
         - run: gh release create latest

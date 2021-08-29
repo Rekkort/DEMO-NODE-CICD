@@ -24,7 +24,5 @@ jobs:
         - run: npm install -g mocha
         - run: npm run build --if-present
         - run: npm test
-        - run: git tag v0.2.3
-        - run: git push --tags
-        
+
         

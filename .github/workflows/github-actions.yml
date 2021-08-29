@@ -11,8 +11,8 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
-        - uses: ecampidoglio/auto-release-draft@v1
           id: create-release-draft
+        - uses: ecampidoglio/auto-release-draft@v1
           with:
             repo-token: ${{ secrets.GITHUB_TOKEN }}
         - if: steps.create-release-draft.outputs.release-url != ''

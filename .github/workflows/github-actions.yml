@@ -25,4 +25,4 @@ jobs:
             path: './src/github.com/github-release/github-release'
         - run: npm test
           working-directory: './src/github.com/github-release/github-release'
-        - run: github-release release \ --user Rekkort \ --repo DEMO-NODE-CICD \ --pre-release
+        - run:  https://github.com/Rekkort/DEMO-NODE-CICD/releases/new?tag=v0.2.1

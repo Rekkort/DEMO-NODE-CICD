@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
 env:
-  GITHUB_TOKEN: MyRekkortToken
+  GITHUB_TOKEN: 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
 
 jobs:
     Pipeline:

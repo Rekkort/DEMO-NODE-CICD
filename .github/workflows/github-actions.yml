@@ -25,4 +25,5 @@ jobs:
         - run: gh auth status
         - run: gh auth login --with-token
         - run: gh auth status
+        - run: export GITHUB_TOKEN=
         - run: gh release create latest

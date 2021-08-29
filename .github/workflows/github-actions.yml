@@ -39,7 +39,3 @@ jobs:
             tag: latest
             overwrite: true
             body: "Mise à jour"
-        # - run: gh auth status
-        # - run: gh auth login --with-token
-        # - run: gh release create latest
-        # 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

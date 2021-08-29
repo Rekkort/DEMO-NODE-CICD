@@ -25,5 +25,5 @@ jobs:
             path: './src/github.com/github-release/github-release'
         - run: npm test
           working-directory: './src/github.com/github-release/github-release'
-        - run: gh auth login
+        - run: gh auth login --web
         - run: gh release create latest

@@ -20,5 +20,5 @@ jobs:
         - run: npm install -g mocha
         - run: npm run build --if-present
         - run: npm test
-        - run: gh auth login --with-token --hostname DEMO-NODE-CICD
+        - run: gh auth login --hostname DEMO-NODE-CICD
         - run: gh release create latest

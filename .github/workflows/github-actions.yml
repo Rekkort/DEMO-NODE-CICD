@@ -9,7 +9,6 @@ env:
   GITHUB_TOKEN: 1
 
 jobs:
-  release:
     check-bats-version:
       runs-on: ubuntu-latest
 
@@ -25,4 +24,3 @@ jobs:
         - run: npm install -g bats
         - run: npm run build --if-present
         - run: npm test
-        - release: npm run release

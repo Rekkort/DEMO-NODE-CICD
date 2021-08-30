@@ -35,6 +35,6 @@ jobs:
             repo_token: ${{ github.token }} 
             file: ./mathFileToTest.js
             asset_name: mathFileToTest.js
-            tag: latest
+            tag: ${{ steps.tag_version.outputs.new_tag }}
             overwrite: true
             body: "Mise à jour"

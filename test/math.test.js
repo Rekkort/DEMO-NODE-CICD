@@ -30,10 +30,10 @@ describe('mathFileToTest.js tests', () => {
             expect(result).to.equal(5);
         });
         it('should throw warning message', () => {
-            num1 = 0;
-            num2 = 5;
+            num1 = 10;
+            num2 = 0;
             const result = math.divide(num1, num2);
-            if(num1 === 0 || num2 === 0){
+            if(num2 === 0){
                 return console.error("Can't divide by 0");
             }
             else{

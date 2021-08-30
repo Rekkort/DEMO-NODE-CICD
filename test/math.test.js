@@ -23,4 +23,23 @@ describe('mathFileToTest.js tests', () => {
             expect(result).to.equal(10);
         });
     });
+
+    describe('math.divide() Test', () => {
+        it('should equal 5', () => {
+            const result = math.divide(5, 1);
+            expect(result).to.equal(5);
+        });
+        it('should throw warning message', () => {
+            num1 = 0;
+            num2 = 5;
+            const result = math.divide(num1, num2);
+            if(num1 === 0 || num2 === 0){
+                return console.error("Can't divide by 0");
+            }
+            else{
+                expect(result).to.finite();
+            }
+            
+        });
+    });
 });
